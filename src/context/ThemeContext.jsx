@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function ThemeContext() {
   return (
-    <div>ThemeContext</div>
+    <div>
+      <FontAwesomeIcon icon="fa-sharp fa-solid fa-moon" />
+    </div>
   )
 }
