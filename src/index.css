@@ -5,11 +5,30 @@
     box-sizing: border-box;
 }
 
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: black;
     color: white;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-bar {
+    padding: 50px;
+}
+.search-bar input{
+    padding: 5px 10px;
+    border: 1px solid gray;
+    outline: none;
+}
+.region-filter {
+    margin-right: 20px;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    outline: none;
 }

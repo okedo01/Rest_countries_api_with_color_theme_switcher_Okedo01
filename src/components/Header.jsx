@@ -1,11 +1,15 @@
 import React from 'react'
-import ThemeContext from '../context/ThemeContext'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoon } from "@fortawesome/free-solid-svg-icons"
 
 export default function Header() {
   return (
-    <div className='header'>
+    <header>
       <p>Where in the World?</p>
-      <ThemeContext />
-    </div>
+      <button>
+        <FontAwesomeIcon icon={faMoon} />
+        <span>DarkMode</span>
+      </button>
+    </header>
   )
 }
