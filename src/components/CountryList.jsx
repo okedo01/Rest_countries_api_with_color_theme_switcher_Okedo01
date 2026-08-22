@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import CountryCard from './CountryCard';
 
 export default function CountryList() {
   const [countries, setCountries] = useState([]);
@@ -24,10 +25,7 @@ export default function CountryList() {
     <div className='countries-list'>
       {
         countries.map(country => (
-          <div key={country.name}>
-            <img src={country.flag} alt="" />
-            <p>{country.name}</p>
-          </div>
+          <CountryCard country={country}/>
         ))
       }
       <p>{error}</p>
