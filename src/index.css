@@ -42,7 +42,8 @@ main {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 45px;
+    padding: 0 20px;
 }
 
 @theme inline {
