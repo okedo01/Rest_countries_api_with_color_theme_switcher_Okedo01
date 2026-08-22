@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CountryCard from './CountryCard';
+import CountryCardSkeleton from './CountryCardSkeleton';
 
 export default function CountryList() {
   const [countries, setCountries] = useState([]);
@@ -24,9 +25,15 @@ export default function CountryList() {
     getCountries();
   }, []);
 
-  if(isLoading) {
-    return <p>Loading countries...</p>
-  }
+  if (isLoading) {
+  return (
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {Array.from({ length: 8 }).map((_, index) => (
+        <CountryCardSkeleton key={index} />
+      ))}
+    </div>
+  );
+}
 
   if(error) {
     return <p>{error}</p>
