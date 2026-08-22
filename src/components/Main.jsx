@@ -5,14 +5,16 @@ import CountryList from './CountryList'
 
 export default function Main() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
+
   return (
     <main>
       <div className='wrapper'>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        <RegionFilter />
+        <RegionFilter selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />
       </div>
       <div>
-        <CountryList searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <CountryList searchTerm={searchTerm} selectedRegion={selectedRegion} />
       </div>
     </main>
   )

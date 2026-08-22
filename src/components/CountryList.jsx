@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CountryCard from './CountryCard';
 import CountryCardSkeleton from './CountryCardSkeleton';
 
-export default function CountryList({searchTerm, setSearchTerm}) {
+export default function CountryList({searchTerm, selectedRegion}) {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,8 +39,11 @@ export default function CountryList({searchTerm, setSearchTerm}) {
     return <p>{error}</p>
   }
 
-  const filteredCountries = countries.filter((country) => 
-    country.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredCountries = countries.filter((country) => {
+    const matchesSearch = country.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesRegion = selectedRegion === "" || country.region === selectedRegion;
+    return matchesRegion && matchesSearch;
+  }
   )
 
   return (
