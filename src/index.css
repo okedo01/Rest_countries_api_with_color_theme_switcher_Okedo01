@@ -14,17 +14,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 40;
     padding: 20px;
     background-color: black;
     color: white;
 }
 main {
     display: flex;
+    flex-direction: column;
+}
+main .wrapper{
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .search-bar {
-    padding: 50px;
+    /* padding: 50px; */
 }
 .search-bar input{
     padding: 5px 10px;
@@ -32,7 +39,7 @@ main {
     outline: none;
 }
 .region-filter {
-    padding: 5px 10px;
+    /* padding: 5px 10px; */
     border: 1px solid gray;
     color: gray;
     outline: none;
@@ -43,6 +50,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 45px;
+    width: 100%;
     padding: 0 20px;
 }
 
