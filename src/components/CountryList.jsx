@@ -1,20 +1,36 @@
-import React, { useEffect } from 'react'
-
-
+import React, { useEffect, useState } from 'react'
 
 export default function CountryList() {
-  useEffect(() => {
-    fetch("/data.json")
-    .then(res => res.json())
-    .then(data=> console.log(data)
-    )
-    .catch(err => console.log(err)
-    )
-  }, []);
-  
-  return (
-    <div>
+  const [countries, setCountries] = useState([]);
+  const [error, setError]= useState("");
 
+  useEffect(() => {
+    async function getCountries() {
+      try {
+        const response = await fetch("/data.json");
+        if(!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
+        }
+        const data = await response.json();
+        setCountries(data);
+      } catch(error) {
+        setError(error);
+      }
+    }
+    getCountries();
+  }, []);
+
+  return (
+    <div className='countries-list'>
+      {
+        countries.map(country => (
+          <div key={country.name}>
+            <img src={country.flag} alt="" />
+            <p>{country.name}</p>
+          </div>
+        ))
+      }
+      <p>{error}</p>
     </div>
   )
 }
