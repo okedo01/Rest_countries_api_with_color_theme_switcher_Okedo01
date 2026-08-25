@@ -50,7 +50,7 @@ export default function CountryList({searchTerm, selectedRegion}) {
     <div className='countries-list'>
       {
         filteredCountries.map(country => (
-          <CountryCard country={country} />
+          <CountryCard country={country} key={country.name} />
         ))
       }
       <p>{error}</p>
