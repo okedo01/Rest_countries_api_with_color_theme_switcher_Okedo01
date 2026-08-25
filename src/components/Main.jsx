@@ -11,11 +11,11 @@ export default function Main() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
-    }, 500);
+    }, 1000);
     return () => {
       clearTimeout(timer);
     }
-  })
+  }, [searchTerm]);
 
   return (
     <main>
@@ -24,7 +24,7 @@ export default function Main() {
         <RegionFilter selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />
       </div>
       <div>
-        <CountryList searchTerm={searchTerm} selectedRegion={selectedRegion} />
+        <CountryList searchTerm={debouncedSearchTerm} selectedRegion={selectedRegion} />
       </div>
     </main>
   )
