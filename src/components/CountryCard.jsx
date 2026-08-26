@@ -7,37 +7,40 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 function CountryCard({ country }) {
   return (
-    <Card className="country-card relative mx-auto w-full max-w-sm" key={country.name}>
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+    <Link to={`/country/${country.alpha3Code}`}>
+      <Card className="country-card relative mx-auto w-full max-w-sm">
+        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
 
-      <img
-        src={country.flags.svg}
-        alt={`Flag of ${country.name.common}`}
-        className="relative z-20 aspect-video w-full object-cover"
-      />
+        <img
+          src={country.flags.svg}
+          alt={`Flag of ${country.name.common}`}
+          className="relative z-20 aspect-video w-full object-cover"
+        />
 
-      <CardHeader>
-        <CardTitle>{country.name}</CardTitle>
-      </CardHeader>
+        <CardHeader>
+          <CardTitle>{country.name}</CardTitle>
+        </CardHeader>
 
-      <CardContent className="contents">
-        <div className="p-4 text-sm">
-          <p>
-            Population: {country.population.toLocaleString()}
-          </p>
-          <p>
-            Region: {country.region}
-          </p>
-          <p>
-            Capital: {country.capital}
-          </p>
+        <CardContent className="contents">
+          <div className="p-4 text-sm">
+            <p>
+              Population: {country.population.toLocaleString()}
+            </p>
+            <p>
+              Region: {country.region}
+            </p>
+            <p>
+              Capital: {country.capital}
+            </p>
 
-        </div>
-      </CardContent>
-    </Card>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
 
