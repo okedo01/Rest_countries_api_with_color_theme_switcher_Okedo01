@@ -1,14 +1,17 @@
 import React from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
-// import CountryList from './components/CountryList'
+import { Route, Routes } from 'react-router-dom'
+import CountryDetails from './components/CountryDetails'
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <Main />
-      {/* <CountryList /> */}
-    </div>
+    <Routes>
+      <Route path='/'>
+        <Header />
+        <Main />
+      </Route>
+      <Route path="/country/:code" element={<CountryDetails />} />
+    </Routes>
   )
 }

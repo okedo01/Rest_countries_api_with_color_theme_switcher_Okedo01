@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CountryCard from './CountryCard';
 import CountryCardSkeleton from './CountryCardSkeleton';
 
-export default function CountryList({searchTerm, selectedRegion}) {
+export default function CountryList({ searchTerm, selectedRegion }) {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,8 +15,11 @@ export default function CountryList({searchTerm, selectedRegion}) {
           throw new Error(`HTTP error ${response.status}`);
         }
         const data = await response.json();
-        setCountries(data);
-        setIsLoading(false);
+
+        setTimeout(() => {
+          setCountries(data);
+          setIsLoading(false);
+        }, 1000);
       } catch (error) {
         setError("Failed to load countries");
         setIsLoading(false);
@@ -26,16 +29,16 @@ export default function CountryList({searchTerm, selectedRegion}) {
   }, []);
 
   if (isLoading) {
-  return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-      {Array.from({ length: 8 }).map((_, index) => (
-        <CountryCardSkeleton key={index} />
-      ))}
-    </div>
-  );
-}
+    return (
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <CountryCardSkeleton key={index} />
+        ))}
+      </div>
+    );
+  }
 
-  if(error) {
+  if (error) {
     return <p>{error}</p>
   }
 
