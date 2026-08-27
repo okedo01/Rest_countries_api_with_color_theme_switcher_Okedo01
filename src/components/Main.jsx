@@ -11,7 +11,7 @@ export default function Main() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearchTerm(searchTerm);
-    }, 1500);
+    }, 1000);
     return () => {
       clearTimeout(timer);
     }

@@ -31,7 +31,7 @@ main .wrapper{
     align-items: center;
 }
 .search-bar {
-    /* padding: 50px; */
+    
 }
 .search-bar input{
     padding: 5px 10px;
@@ -52,6 +52,14 @@ main .wrapper{
     gap: 45px;
     width: 100%;
     padding: 0 20px;
+}
+.main-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
 }
 
 @theme inline {

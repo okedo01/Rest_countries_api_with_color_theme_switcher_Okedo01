@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function CountryDetails() {
   const [countryDetails, setCountryDetails] = useState("");
@@ -23,18 +23,49 @@ export default function CountryDetails() {
         setCountryDetails(foundCountry);
       } catch (error) {
         setError("Failed to Load Country Details");
+      } finally {
+        setLoading(false);
       }
     }
     getCountryDetails();
   }, [code]);
 
-  if (!countryDetails) {
-    return <p>Loading details data...</p>
+  if (loading) {
+    return <p>Loading...</p>
+  }
+  if (error) {
+    return <p>{error}</p>
   }
 
   return (
-    <div>
-      {countryDetails.name}
-    </div>
+    <main>
+      <section className="back-btn">
+        <Link to="/">
+          Back
+        </Link>
+      </section>
+      <section className="main-details">
+        <div>
+          <img src={countryDetails.flags.svg} />
+        </div>
+        <div className="country-details">
+          <strong className='text-2xl'>{countryDetails.name}</strong>
+          <div className='flex justify-between mt-7'>
+            <div>
+              <p>Native Name: {countryDetails.nativeName}</p>
+              <p>Population: {countryDetails.population.toLocaleString()}</p>
+              <p>Region: {countryDetails.region}</p>
+              <p>Sub Region: {countryDetails.subregion}</p>
+              <p>Capital: {countryDetails.capital}</p>
+            </div>
+            <div>
+              <p>Top Level Domain: {countryDetails.topLevelDomain}</p>
+              <p>Currencies: {countryDetails.currencies?.[0]?.code || "N/A"}</p>
+              <p>Language: {countryDetails.languages?.[0]?.name || "N/A"}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }
