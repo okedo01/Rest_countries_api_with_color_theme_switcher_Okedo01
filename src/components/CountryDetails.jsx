@@ -66,15 +66,18 @@ export default function CountryDetails() {
               <p>Language: {countryDetails.languages?.[0]?.name || "N/A"}</p>
             </div>
           </div>
-          <div className="border">
-          Border Countries:
-          <div>
+          <div className="flex flex-wrap gap-3 px-8">
+            <h2><strong>Border Countries:</strong></h2>
             {
               borders.length > 0 ? (
                 borders.map((border) => (
-                  <div key={border} className='cursor-pointer'>
-                    <Link to={`/country/${border}`}>{border}</Link>
-                  </div>
+                  <Link
+                    key={border}
+                    to={`/country/${border}`}
+                    className='border-gray-300 rounded border cursor-pointer'
+                  >
+                    {border}
+                  </Link>
                 ))
               ) : (
                 <strong>No Boarder Found</strong>
@@ -82,8 +85,7 @@ export default function CountryDetails() {
             }
           </div>
         </div>
-        </div>
-        
+
       </section>
     </main>
   )
