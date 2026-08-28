@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 export default function CountryDetails() {
-  const [countryDetails, setCountryDetails] = useState("");
+  const [countryDetails, setCountryDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -72,8 +72,8 @@ export default function CountryDetails() {
             {
               borders.length > 0 ? (
                 borders.map((border) => (
-                  <div key={border}>
-                    <p>{border}</p>
+                  <div key={border} className='cursor-pointer'>
+                    <Link to={`/country/${border}`}>{border}</Link>
                   </div>
                 ))
               ) : (

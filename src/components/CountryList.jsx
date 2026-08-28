@@ -19,7 +19,7 @@ export default function CountryList({ searchTerm, selectedRegion }) {
         setTimeout(() => {
           setCountries(data);
           setIsLoading(false);
-        }, 1000);
+        }, 500);
       } catch (error) {
         setError("Failed to load countries");
         setIsLoading(false);
