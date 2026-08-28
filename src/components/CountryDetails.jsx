@@ -37,6 +37,8 @@ export default function CountryDetails() {
     return <p>{error}</p>
   }
 
+  const borders = countryDetails.borders || [];
+
   return (
     <main>
       <section className="back-btn">
@@ -64,13 +66,24 @@ export default function CountryDetails() {
               <p>Language: {countryDetails.languages?.[0]?.name || "N/A"}</p>
             </div>
           </div>
-        </div>
-        <div className="border">
-          Border Countries: 
+          <div className="border">
+          Border Countries:
           <div>
-            <button>{countryDetails.borders}</button>
+            {
+              borders.length > 0 ? (
+                borders.map((border) => (
+                  <div key={border}>
+                    <p>{border}</p>
+                  </div>
+                ))
+              ) : (
+                <strong>No Boarder Found</strong>
+              )
+            }
           </div>
         </div>
+        </div>
+        
       </section>
     </main>
   )
