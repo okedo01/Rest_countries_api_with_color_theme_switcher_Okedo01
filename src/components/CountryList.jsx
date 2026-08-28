@@ -7,10 +7,14 @@ export default function CountryList({ searchTerm, selectedRegion }) {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  const API_KEY = import.meta.env.VITE_REST_COUNTRIES_API_KEY;
+  console.log("API KEY:", API_KEY);
+
   useEffect(() => {
     async function getCountries() {
       try {
         const response = await fetch("/data.json");
+
         if (!response.ok) {
           throw new Error(`HTTP error ${response.status}`);
         }
