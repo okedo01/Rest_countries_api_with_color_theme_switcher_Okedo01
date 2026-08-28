@@ -65,6 +65,12 @@ export default function CountryDetails() {
             </div>
           </div>
         </div>
+        <div className="border">
+          Border Countries: 
+          <div>
+            <button>{countryDetails.borders}</button>
+          </div>
+        </div>
       </section>
     </main>
   )
