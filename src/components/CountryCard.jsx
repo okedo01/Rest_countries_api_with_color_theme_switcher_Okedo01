@@ -10,20 +10,19 @@ import {
 import { Link } from "react-router-dom";
 
 function CountryCard({ country }) {
-  console.log(country.flag);
   return (
-    <Link to={`/country/${country.codes.alpha_3}`}>
+    <Link to={`/country/${country.alpha3Code}`}>
       <Card className="country-card relative mx-auto w-full max-w-sm">
         <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
 
         <img
-          src={country.flag.url_svg}
-          alt={`Flag of ${country.names.common}`}
+          src={country.flags.svg}
+          alt={`Flag of ${country.name.common}`}
           className="relative z-20 aspect-video w-full object-cover"
         />
 
         <CardHeader>
-          <CardTitle>{country.names.common}</CardTitle>
+          <CardTitle>{country.name}</CardTitle>
         </CardHeader>
 
         <CardContent className="contents">
@@ -35,7 +34,7 @@ function CountryCard({ country }) {
               Region: {country.region}
             </p>
             <p>
-              Capital: {country.capitals?.[0]?.name || "N/A"}
+              Capital: {country.capital}
             </p>
 
           </div>

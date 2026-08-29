@@ -23,7 +23,7 @@ export default function Main() {
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <RegionFilter selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />
       </div>
-      <div>
+      <div className="countries-container">
         <CountryList searchTerm={debouncedSearchTerm} selectedRegion={selectedRegion} />
       </div>
     </main>
