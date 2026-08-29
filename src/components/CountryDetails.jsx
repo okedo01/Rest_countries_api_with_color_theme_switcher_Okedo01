@@ -66,7 +66,7 @@ export default function CountryDetails() {
               <p>Language: {countryDetails.languages?.[0]?.name || "N/A"}</p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-3 px-8">
+          <div className="border-countries flex flex-wrap gap-3 px-8">
             <h2><strong>Border Countries:</strong></h2>
             {
               borders.length > 0 ? (

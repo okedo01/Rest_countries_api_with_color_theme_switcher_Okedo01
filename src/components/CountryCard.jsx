@@ -25,9 +25,9 @@ function CountryCard({ country }) {
           <CardTitle>{country.name}</CardTitle>
         </CardHeader>
 
-        <CardContent className="contents">
-          <div className="p-4 text-sm">
-            <p>
+        <CardContent>
+          <div>
+            <p className="">
               Population: {country.population.toLocaleString()}
             </p>
             <p>
