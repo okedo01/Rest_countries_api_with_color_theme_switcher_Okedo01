@@ -16,7 +16,7 @@ export default function CountryList({ searchTerm, selectedRegion }) {
         // const response = await fetch("/data.json");
         // const response = await fetch("https://countries.dev/countries");
         const response = await fetch(
-          'https://api.restcountries.com/countries/v5?q=canada',
+          'https://api.restcountries.com/countries/v5',
           { headers: { 'Authorization': 'Bearer rc_live_2ccaa355e5ee4650b49a994b0674aba0' } }
         );
 
@@ -53,26 +53,6 @@ export default function CountryList({ searchTerm, selectedRegion }) {
   if (error) {
     return <p>{error}</p>
   }
-
-  // const filteredCountries = countries.filter((country) => {
-  //   const matchesSearch = country.name.toLowerCase().includes(searchTerm.toLowerCase());
-  //   const matchesRegion = selectedRegion === "" || country.region === selectedRegion;
-  //   return matchesRegion && matchesSearch;
-  // }
-  // )
-
-  // const filteredCountries = countries.filter((country) => {
-  //   const countryName = country.name?.common || country.name || "";
-
-  //   const matchesSearch = countryName
-  //     .toLowerCase()
-  //     .includes(searchTerm.toLowerCase());
-
-  //   const matchesRegion =
-  //     selectedRegion === "" || country.region === selectedRegion;
-
-  //   return matchesRegion && matchesSearch;
-  // });
 
   const filteredCountries = countries.filter((country) => {
 
