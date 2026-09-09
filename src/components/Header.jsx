@@ -6,7 +6,7 @@ export default function Header({toggleTheme}) {
   return (
     <header>
       <p>Where in the World?</p>
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} className='cursor-pointer'>
         <FontAwesomeIcon icon={faMoon} />
         <span className='text-xs'>Dark Mode</span>
       </button>

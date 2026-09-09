@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CountryCard from './CountryCard';
 import CountryCardSkeleton from './CountryCardSkeleton';
 
-export default function CountryList({ searchTerm, selectedRegion }) {
+export default function CountryList({ searchTerm, selectedRegion, darkMode }) {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -57,7 +57,7 @@ export default function CountryList({ searchTerm, selectedRegion }) {
     <div className='countries-list'>
       {
         filteredCountries.map(country => (
-          <CountryCard country={country} key={country.name} />
+          <CountryCard country={country} darkMode={darkMode} key={country.name} />
         ))
       }
     </div>

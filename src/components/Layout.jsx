@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 export default function Layout({darkMode, toggleTheme}) {
   return (
     <div>
-        <Header toggleTheme={toggleTheme} />
+        <Header darkMode={darkMode} toggleTheme={toggleTheme} />
         <Outlet />
     </div>
   )

@@ -6,6 +6,7 @@ import CountryDetails from './components/CountryDetails'
 import Layout from './components/Layout'
 
 export default function App() {
+
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleTheme = () => {
@@ -13,10 +14,10 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className={darkMode ? "dark" : "light" }>
         <Routes>
-        <Route element={<Layout toggleTheme={toggleTheme} />}>
-          <Route path="/" element={<Main />} />
+        <Route element={<Layout toggleTheme={toggleTheme} darkMode={darkMode} />}>
+          <Route path="/" element={<Main darkMode={darkMode} />} />
           <Route path="/country/:code" element={<CountryDetails />} />
         </Route>
       </Routes>

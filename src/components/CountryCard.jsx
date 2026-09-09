@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
-function CountryCard({ country }) {
+function CountryCard({ country, darkMode }) {
   return (
     <Link to={`/country/${country.alpha3Code}`}>
       <Card className="country-card relative mx-auto w-full max-w-sm">
