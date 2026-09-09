@@ -21,7 +21,6 @@ The designs were created to the following widths:
 - White (Dark Mode Text & Light Mode Elements): hsl(0, 100%, 100%)
 
 ## Typography
-
 ### Body Copy
 
 - Homepage Items: 14px

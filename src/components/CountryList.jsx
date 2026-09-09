@@ -11,7 +11,8 @@ export default function CountryList({ searchTerm, selectedRegion }) {
     async function getCountries() {
       try {
         const response = await fetch(    
-          "https://countries.dev/countries"
+          // "https://countries.dev/countries"
+          "/data.json"
         );
 
         if (!response.ok) {
