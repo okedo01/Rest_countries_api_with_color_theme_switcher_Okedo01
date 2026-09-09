@@ -13,7 +13,7 @@ function CountryCard({ country }) {
   return (
     <Link to={`/country/${country.alpha3Code}`}>
       <Card className="country-card relative mx-auto w-full max-w-sm">
-        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+        <div className="absolute inset-0 z-30 aspect-video " />
 
         <img
           src={country.flags.svg}
@@ -21,13 +21,13 @@ function CountryCard({ country }) {
           className="relative z-20 aspect-video w-full object-cover"
         />
 
-        <CardHeader>
-          <CardTitle>{country.name}</CardTitle>
-        </CardHeader>
+        <div className="card-name">
+          <h1>{country.name}</h1>
+        </div>
 
         <CardContent>
-          <div>
-            <p className="">
+          <div className="card-details">
+            <p>
               Population: {country.population.toLocaleString()}
             </p>
             <p>
