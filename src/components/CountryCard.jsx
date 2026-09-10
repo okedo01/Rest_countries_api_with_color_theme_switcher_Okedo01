@@ -43,5 +43,4 @@ function CountryCard({ country, darkMode }) {
     </Link>
   );
 }
-
 export default CountryCard;
