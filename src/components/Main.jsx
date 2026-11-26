@@ -3,7 +3,7 @@ import SearchBar from './SearchBar'
 import RegionFilter from './RegionFilter'
 import CountryList from './CountryList'
 
-export default function Main({darkMode}) {
+export default function Main() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
@@ -24,7 +24,7 @@ export default function Main({darkMode}) {
         <RegionFilter selectedRegion={selectedRegion} setSelectedRegion={setSelectedRegion} />
       </div>
       <div className="countries-container">
-        <CountryList searchTerm={debouncedSearchTerm} selectedRegion={selectedRegion} darkMode={darkMode} />
+        <CountryList searchTerm={debouncedSearchTerm} selectedRegion={selectedRegion} />
       </div>
     </main>
   )
