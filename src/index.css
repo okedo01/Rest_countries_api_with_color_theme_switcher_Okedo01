@@ -18,8 +18,8 @@ body {
     font-size: 14px;
     font-family: "Red Hat Mono", monospace;
     font-optical-sizing: auto;
-    background-color: hsl(207, 26%, 17%);
-    color: hsl(0, 100%, 100%);
+    /* background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 100%, 100%); */
     scrollbar-width: none;
 }
 
@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.light {
+/* .light {
     background-color: white;
     color: black;
     min-height: 100vh;
@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 .dark {
     background-color: #202c37;
     color: white;
-}
+} */
 
 header {
     display: flex;
@@ -46,7 +46,7 @@ header {
     top: 0;
     z-index: 40;
     padding: 20px;
-    background-color: hsl(209, 23%, 22%);
+    background-color: hsl(0, 9%, 93%);
 }
 
 main {
@@ -82,8 +82,7 @@ main {
     max-width: 450px;
     padding: 12px 0;
     padding-left: 30px;
-    background-color: hsl(209, 23%, 22%);
-    color: hsl(0, 100%, 100%);
+    background-color:hsl(0, 100%, 100%);
     border: 1px solid hsl(200, 15%, 8%);
     border-radius: 6px;
 }
@@ -102,7 +101,7 @@ main {
 }
 
 .search-bar input::placeholder {
-    color: hsl(0, 0%, 99%);
+    color: hsl(209, 23%, 22%);
 }
 
 .region-filter {
