@@ -1,126 +1,93 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+# REST Countries API with Color Theme Switcher
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+A responsive country information application built with React. The application displays country information using local JSON data and allows users to search, filter, explore country details, and switch between light and dark themes.
 
-## Table of contents
+## Features
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- Display countries with their flags, population, region, and capital.
+- Search for countries by name.
+- Filter countries by region.
+- View detailed information about individual countries.
+- Navigate between countries using border countries.
+- Toggle between light and dark themes.
+- Responsive design for desktop and mobile devices.
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## Live Demo & Links
 
-## Overview
+- Live Site: [View Live Project](https://6b0961abd822d0feddbdaf63--rest-countries-okedo01.netlify.app/)
+- Frontend Mentor Solution: [View Solution](YOUR_FRONTEND_MENTOR_SOLUTION_URL)
+- Frontend Mentor Challenge: [View Challenge](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
 
-### The challenge
+## Screenshots
 
-Users should be able to:
+### Desktop View
 
-- See all countries from the data on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+![Desktop View](./src/assets/screenshots/Desktop_view.png)
 
-### Screenshot
+### Mobile View
 
-![](./screenshot.jpg)
+![Mobile View](./src/assets/screenshots/Mobile_view.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+### Dark Mode
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![Dark Mode](./src/assets/screenshots/dark_mode.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+### Country Details Page
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Country Details](./src/assets/screenshots/country_details_page.png)
 
-### Links
+## Built With
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React
+- React Router DOM
+- Vite
+- Local JSON data (`data.json`)
+- Font Awesome
 
-## My process
+## What I Learned
 
-### Built with
+Working on this project helped me strengthen my React development skills.
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+Key concepts I practiced:
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Managing component state using React Hooks.
+- Passing data between components using props.
+- Reading and rendering data from a local JSON file.
+- Implementing search and filtering functionality.
+- Handling dynamic routes with React Router DOM.
+- Building reusable React components.
+- Implementing light and dark themes.
+- Creating responsive layouts using CSS.
 
-### What I learned
+## Challenges and Solutions
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+One of the main challenges was organizing country data and displaying the correct information on different pages.
 
-To see how you can add code snippets, see below:
+I practiced using React Router for navigation and dynamic route parameters to display individual country details.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I also worked on managing theme state and updating the application's appearance dynamically.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+## Continued Development
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I plan to improve my skills in:
 
-### Continued development
+- React state management.
+- Custom hooks.
+- API integration.
+- Component reusability.
+- Performance optimization.
+- Advanced React Router concepts.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+## AI Collaboration
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I used ChatGPT as a learning and development assistant during this project.
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+It helped me understand React concepts, troubleshoot errors, explore implementation approaches, and improve my problem-solving skills.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- GitHub: [@okedo01](https://github.com/okedo01)
+- Frontend Mentor: [@yourusername](https://www.frontendmentor.io/)
