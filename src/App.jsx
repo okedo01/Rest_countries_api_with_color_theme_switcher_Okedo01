@@ -5,10 +5,14 @@ import Layout from './components/Layout'
 import { useEffect, useState } from 'react'
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   useEffect(() => {
-    document.body.className = darkMode ? "dark" : "light";
+    const theme = darkMode ? "dark" : "light";
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
   }, [darkMode])
 
   const toggleTheme = () => {

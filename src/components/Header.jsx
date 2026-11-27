@@ -8,8 +8,8 @@ export default function Header({ darkMode, toggleTheme }) {
     <header>
       <p>Where in the World?</p>
       <button onClick={toggleTheme} className='cursor-pointer'>
-        <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
-        {darkMode ? "Light Mode" : "Dark Mode"}
+        <FontAwesomeIcon icon={ darkMode ? faSun : faMoon} />
+        { darkMode ? "Dark Mode" : "Light Mode" }
       </button>
     </header>
   )

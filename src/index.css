@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
     background-color: white;
     color: hsl(214, 5%, 30%);
 }
-.dark{
+.dark {
     background-color: hsl(208, 12%, 32%);
     color: white;
 }
@@ -114,7 +114,7 @@ main {
 }
 
 .search-bar input::placeholder {
-    
+
 }
 
 .region-filter {
